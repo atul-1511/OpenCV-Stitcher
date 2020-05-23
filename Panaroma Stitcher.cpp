@@ -9,17 +9,12 @@ using namespace cv;
 using namespace std;
 Mat x(Mat image1, Mat image2);
 int main()
-{
-	
+{	
 	Mat img,Result;
 	img=imread("1.jpg");
 	Result=imread("2.jpg");
 	Mat result=x(img,Result);
 	imwrite("result.jpg",result);
-
- 	
- 
-
 
  namedWindow("result", CV_WINDOW_AUTOSIZE);
   imshow( "result", Result);
@@ -34,8 +29,6 @@ Mat x(Mat image1, Mat image2)
  cvtColor( image1, gray_image1, CV_RGB2GRAY );
  cvtColor( image2, gray_image2, CV_RGB2GRAY );
 
-//imshow("first image",image2);
-//imshow("second image",image1);
 //-- Step 1: Detect the keypoints using SURF Detector
  int minHessian = 400;
 
